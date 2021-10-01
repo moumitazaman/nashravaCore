@@ -9,36 +9,36 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{asset('backend')}}/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="{{asset('backend')}}/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
-    <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('backend')}}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
-    <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="{{asset('backend')}}/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('public/backend')}}/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{asset('backend')}}/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="{{asset('backend')}}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="{{asset('backend')}}/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
-    <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="{{asset('backend')}}/plugins/summernote/summernote-bs4.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="{{asset('backend')}}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="{{asset('backend')}}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- jQuery -->
-  <script src="{{asset('public/backend')}}/plugins/jquery/jquery.min.js"></script>
+  <script src="{{asset('backend')}}/plugins/jquery/jquery.min.js"></script>
   <!-- sweet alert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <!--Datepicker-->
   <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
   <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
   <!-- Select2 -->
-  <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="{{asset('public/backend')}}/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="{{asset('backend')}}/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="{{asset('backend')}}/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- notify -->
   <style type="text/css">
      .notifyjs-corner{
@@ -61,7 +61,7 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="{{url('/admin/home')}}" class="nav-link"><strong style="color:white">Home</strong></a>
       </li>
-      
+
     </ul>
 
     <!-- SEARCH FORM -->
@@ -78,7 +78,7 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-     
+
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -115,16 +115,16 @@
     @elseif ( Request::is('admin/purchase') || Request::is('admin/pruchase/*') || Request::is('admin/purchase/create') )
     @include('backend.layout.sidebar_purchase')
 
-    @elseif ( Request::is('admin/category') || Request::is('admin/category/*') || Request::is('admin/category/create') || Request::is('admin/category-cart') ||  Request::is('admin/sub-category') || Request::is('admin/sub-category/*') || Request::is('admin/sub-category/create')) 
+    @elseif ( Request::is('admin/category') || Request::is('admin/category/*') || Request::is('admin/category/create') || Request::is('admin/category-cart') ||  Request::is('admin/sub-category') || Request::is('admin/sub-category/*') || Request::is('admin/sub-category/create'))
     @include('backend.layout.sidebar_category')
 
-    
+
     @elseif ( Request::is('admin/customer/index') || Request::is('admin/customer-cart') ||  Request::is('admin/customer/draft/view') || Request::is('admin/local/customer/view') || Request::is('admin/local/customer/due-list') || Request::is('admin/local/customer/edit/invoice/*') )
     @include('backend.layout.sidebar_customer')
 
     @elseif ( Request::is('admin/order') || Request::is('admin/pending-list') || Request::is('admin/approve-list') || Request::is('admin/order-cart') || Request::is('admin/details/*') )
     @include('backend.layout.sidebar_order')
-    
+
     @elseif ( Request::is('admin/purchase/daily/report') || Request::is('admin/stock/report') || Request::is('admin/invoice/daily/report') || Request::is('admin/local/invoice/daily/report') )
     @include('backend.layout.sidebar-report')
 
@@ -133,12 +133,12 @@
 
     @elseif ( Request::is('admin/stock') )
     @include('backend.layout.sidebar_stock')
-    
+
     @else
 
  @include('backend.layout.sidebar')
         @endif
-   
+
 
 
 
@@ -167,44 +167,44 @@
   @yield('js')
 
 <!-- jQuery UI 1.11.4 -->
-<script src="{{asset('public/backend')}}/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="{{asset('backend')}}/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('public/backend')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('backend')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
-<script src="{{asset('public/backend')}}/plugins/chart.js/Chart.min.js"></script>
+<script src="{{asset('backend')}}/plugins/chart.js/Chart.min.js"></script>
 <!-- JQVMap -->
-<script src="{{asset('public/backend')}}/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="{{asset('public/backend')}}/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="{{asset('backend')}}/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="{{asset('backend')}}/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- jQuery Knob Chart -->
-<script src="{{asset('public/backend')}}/plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="{{asset('backend')}}/plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
-<script src="{{asset('public/backend')}}/plugins/moment/moment.min.js"></script>
-<script src="{{asset('public/backend')}}/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="{{asset('backend')}}/plugins/moment/moment.min.js"></script>
+<script src="{{asset('backend')}}/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="{{asset('public/backend')}}/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="{{asset('backend')}}/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Summernote -->
-<script src="{{asset('public/backend')}}/plugins/summernote/summernote-bs4.min.js"></script>
+<script src="{{asset('backend')}}/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
-<script src="{{asset('public/backend')}}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="{{asset('backend')}}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('public/backend')}}/dist/js/adminlte.js"></script>
+<script src="{{asset('backend')}}/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('public/backend')}}/dist/js/demo.js"></script>
+<script src="{{asset('backend')}}/dist/js/demo.js"></script>
 <!-- DataTables -->
-<script src="{{asset('public/backend')}}/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="{{asset('public/backend')}}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="{{asset('public/backend')}}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="{{asset('public/backend')}}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="{{asset('backend')}}/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{{asset('backend')}}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="{{asset('backend')}}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{{asset('backend')}}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- jquery-validation -->
-<script src="{{asset('public/backend')}}/plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="{{asset('public/backend')}}/plugins/jquery-validation/additional-methods.min.js"></script>
-<script type="text/javascript" src="{{asset('public/purchase_js')}}/handlebars.min.js"></script>
+<script src="{{asset('backend')}}/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="{{asset('backend')}}/plugins/jquery-validation/additional-methods.min.js"></script>
+<script type="text/javascript" src="{{asset('purchase_js')}}/handlebars.min.js"></script>
 <!-- Select2 -->
-<script src="{{asset('public/backend')}}/plugins/select2/js/select2.full.min.js"></script>
+<script src="{{asset('backend')}}/plugins/select2/js/select2.full.min.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -232,7 +232,7 @@
         $('#showImage').attr('src',e.target.result);
       }
       reader.readAsDataURL(e.target.files['0']);
-   
+
      });
   });
   </script>
@@ -310,7 +310,7 @@
         $('#showImage').attr('src',e.target.result);
       }
       reader.readAsDataURL(e.target.files['0']);
-   
+
      });
   });
   </script>
@@ -355,7 +355,7 @@ function show_status(_this, id) {
         data: {
             _token: _token,
             id: id,
-            status: status 
+            status: status
         },
         success: function (result) {
         }

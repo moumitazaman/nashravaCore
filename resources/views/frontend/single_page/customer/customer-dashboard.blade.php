@@ -1,14 +1,14 @@
 @extends('frontend.layouts.master')
-<link rel="stylesheet" href="{{asset('public/frontend/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
 
 @section('css')
 <style type="text/css">
 
-  
+
         #login .container #login-row #login-column #login-box {
                 margin-top: 40px;
                 max-width: 600px;
-              
+
                 border: 1px solid #9C9C9C;
                 background-color: #EAEAEA;
                 margin-bottom: 40px;
@@ -28,10 +28,10 @@
 <div id="breadcrumb-area">
         <div class="container">
             <div class="row">
-                <div class="col-md-12"> 
+                <div class="col-md-12">
                     <div class="breadcrumbs">
                         <a href="{{url('/')}}">Home</a> <span class="separator">&gt;</span> <span>Dashboard</span>
-                    </div>					   
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
     </div>
 <!-- End Header -->
 <div id="main-content-area" class="padtop80 padbot25 my2">
-            
+
             <!-- End PageHeader -->
             <div class="page-content mt-10 mb-10">
                 <div class="container pt-1">
@@ -69,7 +69,7 @@
                                   document.getElementById('logout-form').submit();" style="font-weight: bold">Logout</a>
                                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
-                                    </form> 
+                                    </form>
                             </li>
                         </ul>
                         <div class="tab-content">

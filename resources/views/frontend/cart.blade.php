@@ -73,7 +73,7 @@
                                         <td class="product-name"><a href="#">{{ $cart->name }}</a>
                                         </td>
                                         <td class="product-edit"><span>Size: {{$cart->options->size_name}}</span><br/>
-                                            
+
                                         </td>
                                         <td class="product-subtotal">BDT. {{$cart->price }}</td>
 
@@ -83,20 +83,20 @@
                                         <input type="hidden" name="price" class="price" value="{{$cart->price}}">
                                         <td class="product-quantity">
 
-                                          
-                                        <form method="POST" class="preview_form{{$count}}" >    
-                                            
+
+                                        <form method="POST" class="preview_form{{$count}}" >
+
                                             <input type="hidden" name="rowId" id="rowId{{$count}}" value="{{ $cart->rowId }}">
                                             <input type="hidden" name="price" id="price{{$count}}" value="{{ $cart->price }}">
 
                                             <div class="cart-plus-minus">
-                                            
+
 
                                                 <input class="cart-plus-minus-box" type="text" id="qty{{$count}}"
                                                        name="qtybutton" value="{{$cart->qty}}">
-                                               
+
                                             </div>
-                                            
+
                                         </td>
                                         <td class="product-remove"><a href="javascript:void(0)" class="edit{{$count}}"><i class="fa fa-edit"></i></a>
                                         </td>
@@ -128,7 +128,7 @@
                                     <td colspan="7" style="text-align: right;">Grand Sub Total  @php if($order==0){ echo "(You Are Getting 10 % Discount on Your First Purchase)";} @endphp</td>
                                     <td class="product-grandtotal grandtotal"><strong>BDT. {{ $subtotals}}</strong></td>
                                 </tr>
-                               
+
                                 </tbody>
                             @else
                                 <tbody>
@@ -245,16 +245,16 @@
             </div>
         </div>
     </div>
-    
+
 
 <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
-    <script src="{{asset('public/frontend/js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{asset('frontend/js/vendor/jquery-1.12.4.min.js')}}"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script>
         $(document).ready(function () {
 
-            <?php for($i=1;$i<=10;$i++){?>   
+            <?php for($i=1;$i<=10;$i++){?>
 
 $('.edit<?php echo $i;?>').on('click', function () {
     var rowId = $("#rowId<?php echo $i;?>").val();
@@ -263,13 +263,13 @@ $('.edit<?php echo $i;?>').on('click', function () {
 
 
 
-    
-    
+
+
 
     $.ajax({
  headers: {
 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-},  
+},
 type:"POST",
 url: "{{route('edit.cart')}}",
 data:{rowId:rowId,qty:qty,price:price},
@@ -282,7 +282,7 @@ $('.subtotal<?php echo $i;?>').text(data.price);
 
                 $(".grandtotal").load("  .grandtotal >*");
 
-  
+
 },
 error:function(error){
  console.log(error)
@@ -298,7 +298,7 @@ error:function(error){
 
 <?php }?>
         });
-        
+
 var selected_coupon_field = null;
         $(".coupon_code").click(function() {
             selected_coupon_field = $(this);
@@ -309,7 +309,7 @@ var selected_coupon_field = null;
                 console.log(request.term);
                 var formData = new FormData();
                 var pro=$('.product_id').val();
-                
+
                 formData.append('coupon_code', request.term)
                formData.append('product_id', selected_coupon_field.parent().find('.product_id').val())
                 $.ajax({
@@ -336,6 +336,6 @@ var selected_coupon_field = null;
         });
 
 
-        
+
     </script>
 @endsection

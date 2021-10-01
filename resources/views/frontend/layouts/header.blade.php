@@ -192,7 +192,7 @@
                                 <div class="logo-area">
                                     <!-- Start Logo -->
                                     <div class="logo">
-                                        <a href="{{ url('/') }}"><img src="{{asset('public/frontend/img/logo/nasrava_orange.png')}}" alt="" /></a>
+                                        <a href="{{ url('/') }}"><img src="{{asset('frontend/img/logo/nasrava_orange.png')}}" alt="" /></a>
                                     </div>
                                     <!-- End Logo -->
                                 </div>
@@ -254,8 +254,8 @@
                                                 <ul>
                                                 @foreach($brands as $brand)
                                   <li><a href="{{route('brand.wise.product',$brand->id)}}">{{$brand->brand_name}}</a></li>
-                                  
-                                  
+
+
                                   @endforeach
 </ul></li>
 <li><a href="{{url('/flashdeals')}}">Flash Deals</a></li>

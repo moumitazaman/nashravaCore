@@ -1,11 +1,11 @@
  @extends('backend.layout.master')
  @section('sidebar')
- 
+
  <!-- Main Sidebar Container -->
   <aside class="main-sidebar  elevation-4" style="background-color:#1c1c1c;">
    <!-- Brand Logo -->
     <a href="{{url('/admin/home')}}" class="brand-link" >
-      <img src="{{asset('public/backend')}}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="{{asset('backend')}}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Nashrava</span>
     </a>
 
@@ -15,7 +15,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex" style="background-color:#1c1c1c;">
         <div class="image">
-          <img src="{{asset('public/backend')}}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('backend')}}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Nashrava</a>
@@ -31,7 +31,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p style="color:#ffffff;">
-               Order Management 
+               Order Management
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -105,7 +105,7 @@
                           <th width="25%">Payment Type</th>
                           <th width="15%">Status</th>
                           <th width="15%">Action</th>
-                      </tr> 
+                      </tr>
                     </thead>
                     <tbody style="color: #4d0026">
                       @foreach($orders as $key => $order)
@@ -130,7 +130,7 @@
                             </td>
                             <td>
                               <div class="row">
-                                <a title="Details" href="{{route('order.details',$order->id)}}" class="btn btn-secondary btn-sm"><i class="fa fa-eye"></i></a>&nbsp;&nbsp;&nbsp;      
+                                <a title="Details" href="{{route('order.details',$order->id)}}" class="btn btn-secondary btn-sm"><i class="fa fa-eye"></i></a>&nbsp;&nbsp;&nbsp;
                                <a title="Approve" href="{{route('order.approve',$order->id)}}" class="btn btn-success btn-sm approveBtn" ><i class="fa fa-check-circle"></i></a>&nbsp;&nbsp;
 
                                 <form action="{{route('order.destroy',$order->id)}}" method="post">
@@ -138,11 +138,11 @@
                                    @method('delete')
                                   <a href="javascript:void(0)" class="btn btn-danger btn-sm delete-confirm" ><i class="fa fa-trash"></i></a>
                                 </form>
-                              </div>  
+                              </div>
                             </td>
                           </tr>
                           @endforeach
-                    </tbody>   
+                    </tbody>
 
                    </table>
                <!-- /.card-body -->

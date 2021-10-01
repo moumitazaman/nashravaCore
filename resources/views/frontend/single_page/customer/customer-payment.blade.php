@@ -2,7 +2,7 @@
 
 @section('css')
  <!-- Main CSS File -->
-	<link rel="stylesheet" type="text/css" href="{{asset('public/frontend')}}/css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('frontend')}}/css/style.min.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified CSS -->
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -118,7 +118,7 @@
 										<td class="product-price">BDT. {{$total}}</td>
 									</tr>
 									<tr>
-										<?php 
+										<?php
 									    $shipcost=App\Model\Shipping::where('user_id',Auth::user()->id)->latest()->first();
 									    $totalcost=$total+($shipcost->shipping_cost);
 									    ?>

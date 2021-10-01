@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html class="no-js" lang="zxx">
-    
+
 <!-- Mirrored from www.thetahmid.com/themes/xemart-v1.0/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Jan 2021 17:15:29 GMT -->
 <head>
         <meta charset="utf-8">
@@ -12,41 +12,41 @@
         <meta name="_token" content="{{ csrf_token() }}"/>
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{asset('public/details/images/favicon.ico" type="image/x-icon')}}">
-        <link rel="icon" href="{{asset('public/details/images/favicon.ico" type="image/x-icon')}}">
+        <link rel="shortcut icon" href="{{asset('details/images/favicon.ico" type="image/x-icon')}}">
+        <link rel="icon" href="{{asset('details/images/favicon.ico" type="image/x-icon')}}">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
 
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="{{asset('public/details/css/assets/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('details/css/assets/bootstrap.min.css')}}">
 
         <!-- Fontawesome Icon -->
-        <link rel="stylesheet" href="{{asset('public/details/css/assets/font-awesome.min.css')}}">
+        <link rel="stylesheet" href="{{asset('details/css/assets/font-awesome.min.css')}}">
 
         <!-- Animate Css -->
-        <link rel="stylesheet" href="{{asset('public/details/css/assets/animate.css')}}">
+        <link rel="stylesheet" href="{{asset('details/css/assets/animate.css')}}">
 
         <!-- Owl Slider -->
-        <link rel="stylesheet" href="{{asset('public/details/css/assets/owl.carousel.min.css')}}">
- 
+        <link rel="stylesheet" href="{{asset('details/css/assets/owl.carousel.min.css')}}">
+
         <!-- Custom Style -->
-        <link rel="stylesheet" href="{{asset('public/details/css/assets/normalize.css')}}">
-        <link rel="stylesheet" href="{{asset('public/details/css/style.css')}}">
-        <link rel="stylesheet" href="{{asset('public/details/css/assets/responsive.css')}}">
-        <script src="{{asset('public/details/js/assets/vendor/jquery-1.12.4.min.js')}}"></script> 
+        <link rel="stylesheet" href="{{asset('details/css/assets/normalize.css')}}">
+        <link rel="stylesheet" href="{{asset('details/css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('details/css/assets/responsive.css')}}">
+        <script src="{{asset('details/js/assets/vendor/jquery-1.12.4.min.js')}}"></script>
 
     </head>
     <body>
 
     <div style="width: 100%;height:40px;background-color:black;padding-top: 5px;" class="row">
-        <ul class="row"> 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                       
+        <ul class="row">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a href="callto:+8801973-833508"><i  class="fa fa-phone-square"></i><span style="color: white;text-align: right;">+88 01973-833508</span></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a href="#"><i class="fa fa-envelope-square" ></i><span style="color: white">info@nashrava.co</span></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              <li><a href="#"><i class="fa fa-envelope-square" ></i><span style="color: white">Nashrava</span></a></li></ul>
-        </ul> 
-     
+        </ul>
+
     </div>
     <!-- Breadcrumb Area -->
         <section class="breadcrumb-area">
@@ -82,7 +82,7 @@
                                         <div class="tab-pane fade show {{$key == 0 ? 'active' : ''}}" id="sg{{$image->id}}" role="tabpanel">
                                             <img src="{{url('public/upload/product_image/product_sub_images/'. $image->sub_image)}}" alt="" class="img-fluid">
                                         </div>
-                        
+
                                         @endforeach
                                     </div>
                                     <div class="nav d-flex justify-content-between">
@@ -124,9 +124,9 @@
                                      </div>
                                       <form action="{{route('insert.cart')}}" method="post" id="cart">
                                         @csrf
-                                         
+
                                            <div class="colo-siz">
-                                    
+
                                            <label class="list-inline-item">Size:</label>
                                            <div class="product-form product-variations product-size col-md-6">
                                                 <div class="product-form-group">
@@ -156,11 +156,11 @@
                                           <input type="hidden" name="id" value="{{$product->id}}">
                                          <div class="pro-btns">
                                               <a href="javascript:void(0)" class="cart" onclick="cartFunction()">Add To Cart</a>
-                                      
+
                                          </div>
-                                       
+
                                            </div>
-                                      </form>     
+                                      </form>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -173,16 +173,16 @@
                                         <div class="tab-pane fade show active" id="pro-det" role="tabpanel">
                                             <p>{{$product->details}}</p>
                                         </div>
-                                     
+
                                     </div>
                                 </div>
                             </div>
-                           
-                                
-                           
+
+
+
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </section>
@@ -209,23 +209,23 @@
 
 
         <!-- Bootstrap -->
-        <script src="{{asset('public/details/js/assets/popper.min.js')}}"></script>
-        <script src="{{asset('public/details/js/assets/bootstrap.min.js')}}"></script>
+        <script src="{{asset('details/js/assets/popper.min.js')}}"></script>
+        <script src="{{asset('details/js/assets/bootstrap.min.js')}}"></script>
 
         <!-- Owl Slider -->
-        <script src="{{asset('public/details/js/assets/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('details/js/assets/owl.carousel.min.js')}}"></script>
 
         <!-- Wow Animation -->
-        <script src="{{asset('public/details/js/assets/wow.min.js')}}"></script>
+        <script src="{{asset('details/js/assets/wow.min.js')}}"></script>
 
         <!-- Price Filter -->
-        <script src="{{asset('public/details/js/assets/price-filter.js')}}"></script>
+        <script src="{{asset('details/js/assets/price-filter.js')}}"></script>
 
         <!-- Mean Menu -->
-        <script src="{{asset('public/details/js/assets/jquery.meanmenu.min.js')}}"></script>
+        <script src="{{asset('details/js/assets/jquery.meanmenu.min.js')}}"></script>
 
         <!-- Custom JS -->
-        <script src="{{asset('public/details/js/plugins.js')}}"></script>
-        <script src="{{asset('public/details/js/custom.js')}}"></script>
+        <script src="{{asset('details/js/plugins.js')}}"></script>
+        <script src="{{asset('details/js/custom.js')}}"></script>
     </body>
 </html>

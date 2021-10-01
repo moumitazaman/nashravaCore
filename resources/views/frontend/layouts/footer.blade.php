@@ -4,9 +4,9 @@
         <div class="footer-top-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-8 col-xm-12 col-sm-6 col-md-3"> 
+                    <div class="col-xs-8 col-xm-12 col-sm-6 col-md-3">
                         <!-- Start Wedget -->
-                        <div class="footer-wedget wedget-contact"> 
+                        <div class="footer-wedget wedget-contact">
                             <!-- Start Wedget Title -->
                             <h4 class="wedget-title">Contact us</h4>
                             <!-- End Wedget Title -->
@@ -20,9 +20,9 @@
                         </div>
                         <!-- End Wedget -->
                     </div>
-                    <div class="col-xs-4 col-xm-12 col-sm-6 col-md-3"> 
+                    <div class="col-xs-4 col-xm-12 col-sm-6 col-md-3">
                         <!-- Start Wedget -->
-                        <div class="footer-wedget"> 
+                        <div class="footer-wedget">
                             <!-- Start Wedget Title -->
                             <h4 class="wedget-title">MY ACCOUNT</h4>
                             <!-- End Wedget Title -->
@@ -31,15 +31,15 @@
                                <li><a href="{{route('customer.login')}}">Login</a></li>
                                <li><a href="{{route('customer.checkout')}}">Checkout</a></li>
                                <li><a href="{{ route('dashboard') }}">Account</a></li>
-                              
+
                             </ul>
                             <!-- End Wedget Lists -->
                         </div>
                         <!-- End Wedget -->
                     </div>
-                    <div class="col-xs-6 col-xm-12 col-sm-6 col-md-3"> 
+                    <div class="col-xs-6 col-xm-12 col-sm-6 col-md-3">
                         <!-- Start Wedget -->
-                        <div class="footer-wedget"> 
+                        <div class="footer-wedget">
                             <!-- Start Wedget Title -->
                             <h4 class="wedget-title">Payment & Shipping</h4>
                             <!-- End Wedget Title -->
@@ -54,10 +54,10 @@
                             <!-- End Wedget Lists -->
                         </div>
                         <!-- End Wedget -->
-                    </div>	
-                    <div class="col-xs-6 col-xm-12 col-sm-6 col-md-3"> 
+                    </div>
+                    <div class="col-xs-6 col-xm-12 col-sm-6 col-md-3">
                         <!-- Start Wedget -->
-                        <div class="footer-wedget"> 
+                        <div class="footer-wedget">
                             <!-- Start Wedget Title -->
                             <h4 class="wedget-title">Customer Service</h4>
                             <!-- End Wedget Title -->
@@ -72,11 +72,11 @@
                             <!-- End Wedget Lists -->
                        </div>
                        <!-- End Wedget -->
-                    </div>	
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12"> 
-                        	
+                    <div class="col-md-12">
+
                     </div>
                 </div>
             </div>
@@ -86,17 +86,17 @@
         <div class="footer-bottom-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4"> 
+                    <div class="col-md-4">
                         <!-- Start Copyright Text -->
-                        <div class="copy-right-text"> 
+                        <div class="copy-right-text">
                             <p>Copyright &copy; 2021 <a href="#" target="_blank">Nashrava</a> All Rights Reserved</p>
                         </div>
                         <!-- End Copyright Text -->
                     </div>
                     <div class="col-md-4">
                         <!-- Start Cards -->
-                        <div class="card-buttons"> 
-                            <img src="{{asset('public/frontend/img/cart/cards.png')}}" alt="" />
+                        <div class="card-buttons">
+                            <img src="{{asset('frontend/img/cart/cards.png')}}" alt="" />
                         </div>
                         <!-- End Cards -->
                     </div>

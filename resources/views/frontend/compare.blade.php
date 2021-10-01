@@ -1,11 +1,11 @@
 <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-<script src="{{asset('public/frontend/js/vendor/jquery-1.12.4.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/jquery-1.12.4.min.js')}}"></script>
 	<!-- bootstrap js -->
-    <script src="{{asset('public/frontend/js/bootstrap.min.js')}}"></script>
-    <link rel="stylesheet" href="{{asset('public/frontend/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/style.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/css/font-awesome.min.css')}}">	
+    <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/style.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/font-awesome.min.css')}}">
 
 
 <style>
@@ -18,26 +18,26 @@
 .p-short-des{
      content: "\a";
     white-space: pre-line;
-  
+
 }
 
 a{
     color:#F36523 !important;
-    
+
 }
 	@media only screen and (max-width: 768px) {
-		    
+
 		    .comptitle{
      content: "\a";
     white-space: pre-line;
     width:50%;
-  
+
 }
-	}	
+	}
     </style>
 
     <div class="container" style="margin-top: 40px">
-       
+
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="row">
@@ -48,23 +48,23 @@ a{
                 <hr>
                 <div class="row">
 
-                <?php 
+                <?php
 
               $ids = session()->get( 'ids' );
 
-              
+
                 $idarr=explode(",",$ids);
                 ?>
                 @foreach($idarr as $id)
                 <?php
-                
+
                 $products= DB::table('products')->where('id',$id)->get();
                     ?>
                     @foreach($products as $pro)
-                    
+
                     <?php
-                
-                
+
+
                 $sizes= DB::table('product_sizes')->select('size_id')->where('product_id',$pro->id)->groupBy('size_id')->get();
 
                     ?>
@@ -92,18 +92,18 @@ a{
 </p>
           </td>
 </tr>
-  <tr> 
+  <tr>
     <td>
-  
+
     </td>
-    
-      
+
+
     </tr>
-    <tr> 
+    <tr>
     <td>
     <p class="p-short-des">
     Sizes:
-    <?php 
+    <?php
 foreach($sizes as $size){
     $sizename= DB::table('sizes')->where('id',$size->size_id)->first();
 
@@ -113,23 +113,23 @@ foreach($sizes as $size){
 <?php }?>
     <p>
     </td>
-    
-      
+
+
     </tr>
-    <tr> 
+    <tr>
     <td>
     <p class="p-short-des">
     Details:{{ $pro->details }}
     <p>
     </td>
-    
-      
+
+
     </tr>
     <tr>
         <td>
         <span class="add-to-cart"><a href="{{route('product.details', $pro->slug)}}"><i class="fa fa-eye" aria-hidden="true"></i>View Details</a></span>
 
-    <span class="add-to-cart" style="float:right;">  
+    <span class="add-to-cart" style="float:right;">
      <form class="cpform{{$pro->id}}">
                                         {{ csrf_field() }}
                             <input type="hidden"  id="rmvid" name="rmvid" />
@@ -137,7 +137,7 @@ foreach($sizes as $size){
      <a href="javascript:void(0)" data-id="{{$pro->id}}" class="delete-confirm" ><i class="fa fa-trash"></i>
      </a>
      </form>
-     
+
      </span>
 
 
@@ -148,12 +148,12 @@ foreach($sizes as $size){
 
   </thead>
   <tbody>
-             
 
-               
-  
-    
-    
+
+
+
+
+
   </tbody>
 </table>
 </div>
@@ -173,17 +173,17 @@ foreach($sizes as $size){
         var clickCount=sessionStorage.getItem('clickCounter');
                     var $this = $(this);
                     var rmvids=JSON.parse(sessionStorage.getItem('rmvids'));
-                    
+
                     if(rmvids){
                         $.each(rmvids, function(index, value){
-                            
+
                             $(".rmv"+value).hide();
 
                         });
-   
+
                     }
                     $('#rmvid').val(rmvids);
-                    
+
 		$(".delete-confirm").click(function (){
 			var id = $(this).data("id");
             $(".rmv"+id).hide();
@@ -194,11 +194,11 @@ clickCount--;
 
 sessionStorage.setItem("clickCount",clickCount);
 
-		
+
 $.ajax({
  headers: {
 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-},  
+},
 type:"POST",
 url: "{{url('/delcompare')}}",
 data:$('.cpform'+id).serializeArray(),
@@ -208,7 +208,7 @@ success:function(data){
 /**/
 
 
-  
+
 },
 error:function(error){
  console.log(error)
@@ -216,12 +216,12 @@ error:function(error){
 },
 
 
-	
 
-}) 
+
+})
 
 		});
-		
+
 	});
-		
+
 </script>

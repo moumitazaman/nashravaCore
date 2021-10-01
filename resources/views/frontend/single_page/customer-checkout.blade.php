@@ -2,8 +2,8 @@
 
 @section('css')
  <!-- Main CSS File -->
-	<link rel="stylesheet" type="text/css" href="{{asset('public/frontend')}}/css/style.min.css">
-	<link rel="stylesheet" type="text/css" href="{{asset('public/frontend')}}/css/demo2.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('frontend')}}/css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('frontend')}}/css/demo2.min.css">
 
 @endsection
 
@@ -37,12 +37,12 @@
         </div>
     </div>
     <style>
-    
+
    .chkdisabled{
        pointer-events: none !important;
        cursor: default !important;
        color:white !important;
-      
+
 }
 .order-table,.btn-order{
     background:#F36523;
@@ -126,7 +126,7 @@
 											$pricetotal=0;
 											$pricediscount=0;
 			                                 $contents = Cart::content();
-											   
+
 							                @endphp
 											<thead>
 												<tr>
@@ -144,9 +144,9 @@
 												</tr>
 												@php
 												if($order==0){
-												
-                                     
-                                     
+
+
+
                                      $pricetotal+=$content->qty * $content->price;
 												$totals+=$content->qty * get_discount_price_by_product_id($content->id);
 												$firstPurchasediscount=$totals*0.1;
@@ -158,7 +158,7 @@
 												$pricediscount+=$content->qty * get_discount_price_by_product_id($content->id);
 
 												}
-											
+
 
 												@endphp
 												@endforeach
@@ -166,13 +166,13 @@
 																						<tr class="order-total">
 													<td>Total:</td>
 													<td>BDT. {{$pricetotal}}
-                                                        
+
                                                     </td>
                                                     </tr><tr>
 													<td>With Discount:</td>
-													<td>BDT. 
+													<td>BDT.
 														 {{$pricediscount}}
-														 
+
                                                     </td>
                                                     </tr>
                                                     <tr>
@@ -183,7 +183,7 @@
                                     $dhakatotal=$pricediscount+$shipdhaka->shipping_cost;
                                     $outdhaka=$pricediscount+$shipout->shipping_cost;
                                      ?>
-                                                       Select Shipping Zone: 
+                                                       Select Shipping Zone:
                                                           <div class="form-check">
   <input class="form-check-input" type="radio" name="ship" id="dhaka" value="{{$shipdhaka->shipping_cost}}">
   <label class="form-check-label" for="dhaka">
@@ -196,10 +196,10 @@
     Outside Dhaka <span class="shiptotals2"></span>
   </label>
 </div>
-                                                      
-                                                        
+
+
                                                     </td>
-                                                
+
                                                         <td  class="shippingtotal">
                                                     <span  class="dhakatotal">BDT. {{$dhakatotal}}</span>
 
@@ -279,7 +279,7 @@
 			</div>
 		</div>
 @endsection
-<script src="{{asset('public/frontend/js/vendor/jquery-1.12.4.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/jquery-1.12.4.min.js')}}"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 @section('js')
@@ -293,7 +293,7 @@
 {
     var valnum = $(this).val();
     $('.shiptotals1').text(valnum);
-   
+
  $('.dhakatotal').show();
  $('.shipi').hide();
  $('.outtotal').hide();
@@ -301,7 +301,7 @@
  $('.shiptotals1').show();
             $('.chk-btn').removeClass('chkdisabled');
 
-  
+
 });
 
  $("#outdhaka").click(function()
@@ -316,7 +316,7 @@ $('.outtotal').show();
 
             $('.chk-btn').removeClass('chkdisabled');
 
-  
+
 });
 
 });
